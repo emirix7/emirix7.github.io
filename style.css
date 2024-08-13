@@ -1,0 +1,200 @@
+
+body, html {
+    height: 100%;
+}
+#rock{
+    width: 600px;
+    height: 499px;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/72695b72-0993-4dbd-9616-1128111b2c5a/dfqyrkk-e63273bc-3b62-4b6e-a61a-0c4aad72d17b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzcyNjk1YjcyLTA5OTMtNGRiZC05NjE2LTExMjgxMTFiMmM1YVwvZGZxeXJray1lNjMyNzNiYy0zYjYyLTRiNmUtYTYxYS0wYzRhYWQ3MmQxN2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.GZqFrQuiko8Bd6BXyx0xYbrz8WLOVHr3jHkcshbTppw');
+    opacity: 0.2;
+    outline: none;
+    background-size:cover;
+    position: absolute;
+    top: 0%;
+}
+#rock:hover{
+    opacity: 0;
+}
+body{
+    background-image: url("https://i.hizliresim.com/brjt0ve.gif");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 499px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 2%;
+    background-color: black;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+     
+}
+
+.container:hover {
+    opacity: 1; /* Opaklık %100 yapıldı */
+    transform: translate(-50%, -50%) scale(1.05); /* Hafif büyüme eklendi */
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6); /* Gölge büyütüldü */
+}
+
+
+#baslik {
+    position: absolute;
+    top: 37%;
+    right: 50%;
+    transform: translateX(50%);
+    color: #908f8f;
+    font-size: 40px;
+    text-align: center;
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+#yazi {
+    position: absolute;
+    top: 45%;
+    right: 50%;
+    transform: translateX(50%);
+    color: gray;
+    font-size: 25px;
+    font-family: 'Monospace', sans-serif;
+    text-align: center;
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fa-instagram, .fa-github {
+    position: absolute;
+    background: black;
+    color: #908f8f;
+    font-size: 30px;
+    top: 68%;
+    z-index: 10;
+}
+
+.fa-instagram {
+    right: calc(50% + 25px); /* Ekranın ortasına göre pozisyonlandı */
+}
+
+.fa-github {
+    right: calc(50% - 25px); /* Ekranın ortasına göre pozisyonlandı */
+}
+
+img.profil {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    border-radius: 10%;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-link {
+    color: #908f8f;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    font-family: 'Bona Nova SC', serif;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+.theme-toggle {
+    font-size: 20px;
+}
+
+#theme-switcher {
+    background: none;
+    border: none;
+    color: #908f8f;
+    font-size: 20px;
+    cursor: default;
+}
+
+
+
+/* Daha küçük ekranlar için medya sorgusu */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #baslik, #yazi {
+        right: 0;
+        left: 0;
+        transform: none;
+        text-align: center;
+        width: 100%;
+    }
+    #baslik{
+        top: 180px;
+    }
+    #yazi{
+        top: 210px;
+    }
+
+    .fa-instagram, .fa-github {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .fa-instagram {
+        top: 275px;
+        left: calc(50% - 40px);
+    }
+
+    .fa-github {
+        top: 275px;
+        left: calc(50% + 10px);
+    }
+
+    img.profil {
+        top: 150px;
+    }
+}
